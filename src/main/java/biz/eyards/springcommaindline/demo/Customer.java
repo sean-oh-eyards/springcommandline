@@ -9,7 +9,7 @@ import javax.persistence.Id;
  */
 
 @Entity
-public class Customer {
+public class Customer extends Object {
     @Id
     @GeneratedValue
     Long id;
@@ -25,7 +25,8 @@ public class Customer {
         this.name = name;
     }
 
-    public String toSting() {
+    @Override
+    public String toString() {
         return "Customer [id=" + id + ", name=" + name + "]";
     }
 }
